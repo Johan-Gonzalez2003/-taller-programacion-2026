@@ -46,6 +46,8 @@ public abstract class Usuario {
         return librosPrestados.remove(libro);
     }
 
+    public abstract String getTipoUsuario();
+
     @Override
     public String toString() {
         return "Usuario{" +

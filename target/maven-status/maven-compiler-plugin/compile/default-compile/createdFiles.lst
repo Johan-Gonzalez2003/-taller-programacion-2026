@@ -1,0 +1,6 @@
+com\umb\taller\domain\Biblioteca.class
+com\umb\taller\domain\Bibliotecario.class
+com\umb\taller\domain\Estudiante.class
+com\umb\taller\domain\Libro.class
+com\umb\taller\domain\Prestamo.class
+com\umb\taller\domain\Usuario.class
