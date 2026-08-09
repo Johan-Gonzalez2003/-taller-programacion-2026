@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Usuario {
+public abstract class Usuario {
 
     private String nombre;
     private String documento;
