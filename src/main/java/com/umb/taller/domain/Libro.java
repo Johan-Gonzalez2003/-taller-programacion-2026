@@ -1,14 +1,25 @@
 package com.umb.taller.domain;
 
 public class Libro {
+
+    private Long id;
     private String titulo;
     private String autor;
     private boolean disponible;
 
-    public Libro(String titulo, String autor) {
+    public Libro(Long id, String titulo, String autor) {
+        this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.disponible = true;
+    }
+
+    public Libro(String titulo, String autor) {
+        this(null, titulo, autor);
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getTitulo() {
@@ -27,6 +38,7 @@ public class Libro {
         if (!disponible) {
             return false;
         }
+
         disponible = false;
         return true;
     }
@@ -35,12 +47,18 @@ public class Libro {
         if (disponible) {
             return false;
         }
+
         disponible = true;
         return true;
     }
 
     @Override
     public String toString() {
-        return "Libro{titulo='" + titulo + "', autor='" + autor + "', disponible=" + disponible + "}";
+        return "Libro{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", disponible=" + disponible +
+                '}';
     }
 }

@@ -6,14 +6,24 @@ import java.util.List;
 
 public abstract class Usuario {
 
+    private Long id;
     private String nombre;
     private String documento;
     private List<Libro> librosPrestados;
 
-    public Usuario(String nombre, String documento) {
+    public Usuario(Long id, String nombre, String documento) {
+        this.id = id;
         this.nombre = nombre;
         this.documento = documento;
         this.librosPrestados = new ArrayList<>();
+    }
+
+    public Usuario(String nombre, String documento) {
+        this(null, nombre, documento);
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getNombre() {
@@ -51,7 +61,8 @@ public abstract class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "nombre='" + nombre + '\'' +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
                 ", documento='" + documento + '\'' +
                 ", librosPrestados=" + librosPrestados +
                 '}';
